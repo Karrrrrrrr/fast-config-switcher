@@ -1,0 +1,8 @@
+
+mysql.host: mysql
+mysql.port: 3306
+mysql.dbname: kratos
+
+redis.port: 6379
+redis.host: "redis"
+redis.db: 0

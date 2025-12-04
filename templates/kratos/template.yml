@@ -1,0 +1,13 @@
+# 这里配置服务固定的参数
+http:
+  port: 8000
+
+# 使用变量配置比较通用的参数
+db:
+  host: ${mysql.host}
+  port: ${mysql.port}
+  dbname: ${mysql.dbname}
+redis:
+  host: ${redis.host}
+  port: ${redis.port}
+  db: ${redis.db}
