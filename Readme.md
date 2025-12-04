@@ -11,19 +11,16 @@
 
 本项目的方案如下
 
-比如运行如下命令
-读取当前目录中develop.yml作为变量文件
-如果不存在就退而求其次读取 ```~/.config/consul/develop.yml```
+当运行本程序 ```python switch.py -env develop```
+读取当前目录中```./variable/develop.yml```作为变量文件
+如果不存在就退而求其次读取 ```~/.config/consul/variable/develop.yml```
 还不存在就结束程序
 
-然后去递归扫描 ./config/**.yml
+然后去递归扫描 ./templates/**.yml
 如果存在，就会把文件名去掉后缀作为consul-key，把里面的变量替换为变量文件中定义的值
-
-```shell
-python3 switch.py -env develop
-```
+ 
 比如有
-```config/kratos/template.yml```
+```templates/kratos/template.yml```
 
 ```yaml
 # 这里配置服务固定的参数
@@ -42,7 +39,7 @@ redis:
 
 ```
 
-```varable/develop.yml```
+```variable/develop.yml```
 
 ```yaml
 
